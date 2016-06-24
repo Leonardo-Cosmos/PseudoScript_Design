@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/" xmlns="http://www.example.org/"
+	elementFormDefault="qualified">
+
+
+    <xs:complexType name="Step"></xs:complexType>
+</xs:schema>
+

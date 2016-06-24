@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+  <datasource name="page" path="./page.properties" />
+  <steps>
+  	<step name="OpenURL" category="Selenium">
+  		<params>
+  			<param name="URL">
+  				<dataref src="page" key="HomePage" />
+  			</param>
+  		</params>
+  	</step>
+    <step name="Click" category="Selenium">
+    	<params>
+    		<param name="XPath">//*[@id="sb_form_go"]</param>
+    	</params>
+    </step>
+    <step name="InputText" category="Selenium">
+    	<params>
+    	
+    	</params>
+    </step> 
+  </steps>
+</script>
