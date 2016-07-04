@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://www.pseudoscript.org/Script" xmlns:scp="http://www.pseudoscript.org/Script"
+	targetNamespace="http://www.pseudoscript.org/Script" 
+  xmlns:scp="http://www.pseudoscript.org/Script"
 	elementFormDefault="qualified">
 
 	<xsd:element name="script" type="scp:script"></xsd:element>
@@ -10,11 +11,21 @@
 			<xsd:element name="dataSources">
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="dataSource" type="scp:dataSource"
-							maxOccurs="unbounded" minOccurs="0"></xsd:element>
+						<xsd:element name="dataSource" type="scp:dataSource" 
+                         maxOccurs="unbounded" minOccurs="0">
+            </xsd:element>
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
+      <xsd:element name="operations">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="operation" type="scp:operation"
+                         maxOccurs="unbounded" minOccurs="0">
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
 
@@ -23,4 +34,40 @@
 		<xsd:attribute name="category" type="xsd:string"></xsd:attribute>
 		<xsd:attribute name="src" type="xsd:string"></xsd:attribute>
 	</xsd:complexType>
+
+  <xsd:complexType name="operation">
+    <xsd:sequence>
+      <xsd:element name="arguments">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="argument" type="scp:argument" 
+                         maxOccurs="unbounded" minOccurs="0">
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+    <xsd:attribute name="executor" type="xsd:string"></xsd:attribute>
+  </xsd:complexType>
+
+  <xsd:complexType name="argument">
+    <xsd:choice>
+      <xsd:element name="simpleData" type="scp:simpleData"></xsd:element>
+      <xsd:element name="referredData" type="scp:referredData"></xsd:element>
+    </xsd:choice>
+    <xsd:attribute name="name"></xsd:attribute>
+  </xsd:complexType>
+
+  <xsd:complexType name="simpleData">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  
+  <xsd:complexType name="referredData">
+    <xsd:attribute name="ref" type="xsd:string"></xsd:attribute>
+    <xsd:attribute name="key" type="xsd:string"></xsd:attribute>
+  </xsd:complexType>
 </xsd:schema>

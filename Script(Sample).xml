@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<case>
-  <datasource id="page" category="properties" src="./page.properties" />
-  <steps>
-  	<step name="OpenURL" category="Selenium">
-  		<params>
-  			<param name="URL">
-  				<dataref src="page" key="HomePage" />
-  			</param>
-  		</params>
-  	</step>
-    <step name="Click" category="Selenium">
-    	<params>
-    		<param name="XPath">//*[@id="sb_form_go"]</param>
-    	</params>
-    </step>
-    <step name="InputText" category="Selenium">
-    	<params>
-        <param name="XPath">
-          <dataref src="page" key="SearchInput" />
-        </param>
-        <param name="text">This is a sample</param>
-    	</params>
-    </step> 
-  </steps>
-</case>
+<script 
+  xmlns="http://www.pseudoscript.org/Script"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.pseudoscript.org/Script Script.xsd">
+  <dataSources>
+    <dataSource id="page" category="properties" src="./page.properties" />
+  </dataSources>
+
+  <operations>
+  	<operation name="OpenURL" category="Selenium">
+  		<arguments>
+  			<argument name="URL">
+  				<dataref ref="page" key="HomePage" />
+  			</argument>
+  		</arguments>
+  	</operation>
+    <operation name="Click" category="Selenium">
+    	<arguments>
+    		<argument name="XPath">//*[@id="sb_form_go"]</argument>
+    	</arguments>
+    </operation>
+    <operation name="InputText" category="Selenium">
+    	<arguments>
+        <argument name="XPath">
+          <dataref ref="page" key="SearchInput" />
+        </argument>
+        <argument name="text">This is a sample</argument>
+    	</arguments>
+    </operation> 
+  </operations>
+</script>
