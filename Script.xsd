@@ -56,7 +56,7 @@
       <xsd:element name="simpleData" type="scp:simpleData"></xsd:element>
       <xsd:element name="referredData" type="scp:referredData"></xsd:element>
     </xsd:choice>
-    <xsd:attribute name="name"></xsd:attribute>
+    <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
   </xsd:complexType>
 
   <xsd:complexType name="simpleData">
