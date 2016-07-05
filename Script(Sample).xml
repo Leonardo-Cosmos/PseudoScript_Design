@@ -9,24 +9,24 @@
 	<operations>
 		<operation name="OpenURL" executor="Selenium">
 			<arguments>
-				<argument name="URL">
+				<argument name="URL" type="string">
 					<referredData ref="page" key="HomePage" />
 				</argument>
 			</arguments>
 		</operation>
 		<operation name="Click" executor="Selenium">
 			<arguments>
-				<argument name="XPath">
+				<argument name="XPath" type="string">
 					<simpleData>//*[@id="sb_form_go"]</simpleData>
 				</argument>
 			</arguments>
 		</operation>
 		<operation name="InputText" executor="Selenium">
 			<arguments>
-				<argument name="XPath">
+				<argument name="XPath" type="string">
 					<referredData ref="page" key="SearchInput" />
 				</argument>
-				<argument name="text">
+				<argument name="text" type="string">
 					<simpleData>This is a sample</simpleData>
 				</argument>
 			</arguments>
