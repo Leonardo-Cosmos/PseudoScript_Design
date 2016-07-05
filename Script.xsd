@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="http://www.pseudoscript.org/Script" 
-  xmlns:scp="http://www.pseudoscript.org/Script"
+  	xmlns:scp="http://www.pseudoscript.org/Script"
 	elementFormDefault="qualified">
 
 	<xsd:element name="script" type="scp:script"></xsd:element>
@@ -70,4 +70,5 @@
     <xsd:attribute name="ref" type="xsd:string"></xsd:attribute>
     <xsd:attribute name="key" type="xsd:string"></xsd:attribute>
   </xsd:complexType>
+  
 </xsd:schema>
