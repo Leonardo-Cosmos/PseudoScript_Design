@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly xmlns="http://www.pseudoscript.org/Assembly"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.pseudoscript.org/Assembly Assembly.xsd">
+	<operations>
+		<operation name="OpenURL" executor="Selenium">
+			<parameters>
+				<parameter name="URL" type="string" />
+			</parameters>
+		</operation>
+		<operation name="Click" executor="Selenium">
+			<parameters>
+				<parameter name="XPath" type="string" />
+			</parameters>
+		</operation>
+		<operation name="InputText" executor="Selenium">
+			<parameters>
+				<parameter name="XPath" type="string" />
+				<parameter name="Text" type="string" default="Sample" />
+			</parameters>
+		</operation>
+	</operations>
+</assembly>
