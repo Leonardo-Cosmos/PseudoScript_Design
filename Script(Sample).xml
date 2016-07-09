@@ -10,7 +10,7 @@
 		<operation name="OpenURL" executor="Selenium">
 			<arguments>
 				<argument name="URL" type="string">
-					<referredData ref="page" key="HomePage" />
+					<referredData dataSource="page" key="HomePage" />
 				</argument>
 			</arguments>
 		</operation>
@@ -24,7 +24,7 @@
 		<operation name="InputText" executor="Selenium">
 			<arguments>
 				<argument name="XPath" type="string">
-					<referredData ref="page" key="SearchInput" />
+					<referredData dataSource="page" key="SearchInput" />
 				</argument>
 				<argument name="text" type="string">
 					<simpleData>This is a sample</simpleData>

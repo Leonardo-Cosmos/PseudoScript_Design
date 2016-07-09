@@ -67,7 +67,7 @@
 	</xsd:complexType>
 
 	<xsd:complexType name="referredData">
-		<xsd:attribute name="ref" type="xsd:string" use="required"></xsd:attribute>
+		<xsd:attribute name="dataSource" type="xsd:string" use="required"></xsd:attribute>
 		<xsd:attribute name="key" type="xsd:string" use="required"></xsd:attribute>
 	</xsd:complexType>
 
