@@ -30,8 +30,8 @@
 
 	<xsd:complexType name="dataSource">
 		<xsd:attribute name="id" type="xsd:string" use="required"></xsd:attribute>
-		<xsd:attribute name="category" type="xsd:string" use="required"></xsd:attribute>
-		<xsd:attribute name="src" type="xsd:string" use="required"></xsd:attribute>
+		<xsd:attribute name="base" type="xsd:string" use="optional"></xsd:attribute>
+		<xsd:attribute name="key" type="xsd:string" use="optional"></xsd:attribute>
 	</xsd:complexType>
 
 	<xsd:complexType name="operation">
