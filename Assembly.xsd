@@ -40,6 +40,6 @@
 		<xsd:attribute name="type" type="xsd:string" use="required"></xsd:attribute>
 		<xsd:attribute name="defaultValue" type="xsd:string"
 			use="optional"></xsd:attribute>
-	</xs":complexType>
+	</xsd:complexType>
 
 </xsd:schema>
