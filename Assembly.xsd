@@ -7,6 +7,9 @@
 
 	<xsd:complexType name="assembly">
 		<xsd:sequence>
+			<xsd:element name="executor" type="asm:executor"
+				maxOccurs="1" minOccurs="1">
+			</xsd:element>
 			<xsd:element name="operations">
 				<xsd:complexType>
 					<xsd:sequence>
@@ -17,6 +20,10 @@
 				</xsd:complexType>
 			</xsd:element>
 		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="executor">
+		<xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
 	</xsd:complexType>
 
 	<xsd:complexType name="operation">
@@ -32,7 +39,6 @@
 			</xsd:element>
 		</xsd:sequence>
 		<xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
-		<xsd:attribute name="executor" type="xsd:string" use="required"></xsd:attribute>
 	</xsd:complexType>
 
 	<xsd:complexType name="parameter">

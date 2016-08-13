@@ -2,21 +2,22 @@
 <assembly xmlns="http://www.pseudoscript.org/Assembly"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.pseudoscript.org/Assembly Assembly.xsd">
+	<executor name="Selenium"></executor>
 	<operations>
-		<operation name="OpenURL" executor="Selenium">
+		<operation name="OpenURL">
 			<parameters>
 				<parameter name="URL" type="string" />
 			</parameters>
 		</operation>
-		<operation name="Click" executor="Selenium">
+		<operation name="Click">
 			<parameters>
 				<parameter name="XPath" type="string" />
 			</parameters>
 		</operation>
-		<operation name="InputText" executor="Selenium">
+		<operation name="InputText">
 			<parameters>
 				<parameter name="XPath" type="string" />
-				<parameter name="Text" type="string" default="Sample" />
+				<parameter name="Text" type="string" defaultValue="Sample" />
 			</parameters>
 		</operation>
 	</operations>
